@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Weixin Image_20240416110038_0: 2773010927973293288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
