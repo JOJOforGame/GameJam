@@ -23,6 +23,7 @@ public class DialogTrigger : MonoBehaviour
             Debug.Log("Player out of range");
             playerInRange = false;
             Dialog.DialogIndicator.SetActive(false);
+            Dialog.EndDialog();
         }
     }
 
