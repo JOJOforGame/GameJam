@@ -97,4 +97,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
+
+    public bool isGrounded()
+    {
+        return grounded;
+    }
 }

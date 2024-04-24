@@ -77,4 +77,9 @@ public class Dialog : MonoBehaviour
             }
         }
     }
+
+    public bool InDialog()
+    {
+        return inDialog;
+    }
 }
