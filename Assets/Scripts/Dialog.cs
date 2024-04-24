@@ -10,10 +10,12 @@ public class Dialog : MonoBehaviour
     public TMP_Text DialogText;
     public float TypeSpeed = 0.5f;
 
-    [TextArea(1, 3)]
+    [TextAreaAttribute(1, 3)]
     public List<string> sentences;
+
     private int s_index;
     private bool inDialog;
+    private Coroutine typingRoutine;
 
     private void Awake()
     {
@@ -37,8 +39,12 @@ public class Dialog : MonoBehaviour
 
     public void EndDialog()
     {
+        inDialog = false;
         DialogBubble.SetActive(false);
-        DialogIndicator.SetActive(false);
+        if (typingRoutine != null)
+        {
+            StopCoroutine(typingRoutine);
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -53,16 +59,21 @@ public class Dialog : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (inDialog && Input.GetKeyDown(KeyCode.E))
         {
             s_index += 1;
             if (s_index < sentences.Count)
             {
-                StartCoroutine(TypeSentence(sentences[s_index]));
+                if (typingRoutine != null)
+                {
+                    StopCoroutine(typingRoutine);
+                }
+                typingRoutine = StartCoroutine(TypeSentence(sentences[s_index]));
             }
             else
             {
                 EndDialog();
+                DialogIndicator.SetActive(true);
             }
         }
     }
