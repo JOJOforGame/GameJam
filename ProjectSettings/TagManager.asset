@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Platform
   - Ground
-  - 
-  - 
+  - NPC
+  - DIalog
   - 
   - 
   - 
@@ -51,4 +51,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3198754863
+    locked: 0
+  - name: NPC
+    uniqueID: 2962026303
+    locked: 0
+  - name: Dialog
+    uniqueID: 1341964637
     locked: 0
