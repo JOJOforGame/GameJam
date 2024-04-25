@@ -12,7 +12,7 @@ public class DialogTrigger : MonoBehaviour
         {
             Debug.Log("Player in range");
             playerInRange = true;
-            Dialog.DialogIndicator.SetActive(true);
+            Dialog.DialogIndicator.SetActive(!Dialog.InDialog());
         }
     }
 
