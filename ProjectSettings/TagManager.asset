@@ -49,11 +49,11 @@ TagManager:
   - name: Platform
     uniqueID: 1341613817
     locked: 0
-  - name: Player
-    uniqueID: 3198754863
-    locked: 0
   - name: NPC
     uniqueID: 2962026303
+    locked: 0
+  - name: Player
+    uniqueID: 3198754863
     locked: 0
   - name: Dialog
     uniqueID: 1341964637

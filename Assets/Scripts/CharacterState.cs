@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class DialogTrigger : MonoBehaviour
+public class CharacterState : MonoBehaviour
 {
+    public UnityEvent ResetDialog;
     private bool playerInRange;
-    public Dialog Dialog;
+
+    void Start()
+    {
+        playerInRange = false;
+    }
+
+    public bool isPlayerInRange()
+    {
+        return playerInRange;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Player in range");
             playerInRange = true;
-            Dialog.DialogIndicator.SetActive(!Dialog.InDialog());
         }
     }
 
@@ -22,16 +33,7 @@ public class DialogTrigger : MonoBehaviour
         {
             Debug.Log("Player out of range");
             playerInRange = false;
-            Dialog.DialogIndicator.SetActive(false);
-            Dialog.EndDialog();
-        }
-    }
-
-    private void Update()
-    {
-        if (playerInRange = true && Input.GetKeyDown(KeyCode.E))
-        {
-            Dialog.StartDialog();
+            ResetDialog.Invoke();
         }
     }
 }
