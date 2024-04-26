@@ -20,6 +20,16 @@ public class PlayerMovement : MonoBehaviour
     bool grounded = false;
     Vector3 m_Velocity = Vector3.zero;
 
+    public bool ShouldFlip()
+    {
+        return horizontalMove < 0f;
+    }
+
+    public bool isRunning()
+    {
+        return grounded && horizontalMove != 0f;
+    }
+
     void Start() {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -45,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxis("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (horizontalMove > 0f)
+        if (horizontalMove >= 0f)
         {
             sr.flipX = false;
         }
