@@ -6,11 +6,13 @@ public class ConversationTrigger : MonoBehaviour
 {
     public ConversationManger dialogueManager;
     public Conversation conversation;
+    public Canvas bagCanvas;
 
     public AudioSource backgroundMusic;
 
     void Start()
     {
+        bagCanvas.gameObject.SetActive(false);
         backgroundMusic.Play();
         if (dialogueManager != null && conversation != null)
         {
