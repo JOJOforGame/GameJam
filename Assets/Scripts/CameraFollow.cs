@@ -19,17 +19,30 @@ public class CameraFollow : MonoBehaviour
         if (target != null)
         {
             Vector3 targetPosition = target.position + offset;
-            targetPosition.y = transform.position.y;
 
-            float screenEdge = mainCamera.ScreenToWorldPoint(new Vector3(edgeBuffer, 0f, mainCamera.nearClipPlane)).x;
+            // 水平方向的跟随
+            float horizontalScreenEdge = mainCamera.ScreenToWorldPoint(new Vector3(edgeBuffer, 0f, mainCamera.nearClipPlane)).x;
 
-            if (target.position.x < transform.position.x - screenEdge || target.position.x > transform.position.x + screenEdge)
+            if (target.position.x < transform.position.x - horizontalScreenEdge || target.position.x > transform.position.x + horizontalScreenEdge)
             {
-                float moveSpeed = Mathf.Abs(target.GetComponent<Rigidbody2D>().velocity.x);
-                Vector3 desiredPosition = new Vector3(targetPosition.x, transform.position.y, transform.position.z);
-                Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * moveSpeed * Time.fixedDeltaTime);
-                transform.position = smoothedPosition;
+                float horizontalMoveSpeed = Mathf.Abs(target.GetComponent<Rigidbody2D>().velocity.x);
+                Vector3 horizontalDesiredPosition = new Vector3(targetPosition.x, transform.position.y, transform.position.z);
+                Vector3 horizontalSmoothedPosition = Vector3.Lerp(transform.position, horizontalDesiredPosition, smoothSpeed * horizontalMoveSpeed * Time.fixedDeltaTime);
+                transform.position = horizontalSmoothedPosition;
+            }
+
+            // 垂直方向的跟随
+            float verticalScreenEdge = mainCamera.ScreenToWorldPoint(new Vector3(0f, edgeBuffer, mainCamera.nearClipPlane)).y;
+
+            if (target.position.y < transform.position.y - verticalScreenEdge || target.position.y > transform.position.y + verticalScreenEdge)
+            {
+                float verticalMoveSpeed = Mathf.Abs(target.GetComponent<Rigidbody2D>().velocity.y);
+                Vector3 verticalDesiredPosition = new Vector3(transform.position.x, targetPosition.y, transform.position.z);
+                Vector3 verticalSmoothedPosition = Vector3.Lerp(transform.position, verticalDesiredPosition, smoothSpeed * verticalMoveSpeed * Time.fixedDeltaTime);
+                transform.position = verticalSmoothedPosition;
             }
         }
     }
+
+
 }
