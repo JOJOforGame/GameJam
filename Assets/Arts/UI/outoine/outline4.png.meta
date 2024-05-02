@@ -529,7 +529,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      outline4_0: 7960399334648761170
+      outline4_1: -3648881821774193750
+      outline4_10: 9197900102019554890
+      outline4_11: -6353627159103283137
+      outline4_12: 4322344122386713740
+      outline4_13: 774909065672437929
+      outline4_14: 6782482359284105356
+      outline4_15: 5394354416321154961
+      outline4_2: -8314151047780692281
+      outline4_3: 1352366443651903367
+      outline4_4: -8513019027227786725
+      outline4_5: 1200618153739926745
+      outline4_6: 5345173759517156496
+      outline4_7: -9114679358287771774
+      outline4_8: 5938010199714423288
+      outline4_9: -3361519807193612560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
