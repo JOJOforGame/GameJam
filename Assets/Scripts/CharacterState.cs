@@ -22,7 +22,6 @@ public class CharacterState : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player in range");
             playerInRange = true;
         }
     }
@@ -31,7 +30,6 @@ public class CharacterState : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player out of range");
             playerInRange = false;
             ResetDialog.Invoke();
         }

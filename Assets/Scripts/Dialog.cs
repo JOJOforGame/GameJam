@@ -29,29 +29,6 @@ public class Dialog : MonoBehaviour
         resetDialog();
     }
 
-    // public void StartDialog()
-    // {
-    //     if (inDialog)
-    //     {
-    //         return;
-    //     }
-
-    //     inDialog = true;
-    //     DialogIndicator.SetActive(false);
-    //     DialogText.text = string.Empty;
-    //     s_index = -1;
-    // }
-
-    // public void EndDialog()
-    // {
-    //     inDialog = false;
-    //     DialogBubble.SetActive(false);
-    //     if (typingRoutine != null)
-    //     {
-    //         StopCoroutine(typingRoutine);
-    //     }
-    // }
-
     IEnumerator TypeSentence(string sentence)
     {
         DialogText.text = "";
