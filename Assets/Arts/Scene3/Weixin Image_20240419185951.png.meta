@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 953dc450ee10a1b43a94da638c6a1321
+guid: 765841123acfb544fb44d886f5beb9c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1222337493438415029
-    second: Weixin Image_20240429132207_0
+      213: 2312905242470042722
+    second: Weixin Image_20240419185951_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weixin Image_20240429132207_0
+      name: Weixin Image_20240419185951_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6000
-        height: 3100
+        width: 2800
+        height: 1575
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b0c90c597d96f010800000000000000
-      internalID: 1222337493438415029
+      spriteID: 26cc0905017191020800000000000000
+      internalID: 2312905242470042722
       vertices: []
       indices: 
       edges: []
