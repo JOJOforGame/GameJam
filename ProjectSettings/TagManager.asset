@@ -6,8 +6,9 @@ TagManager:
   tags:
   - Ground
   - fishman
-  - kite
-  - bamboo
+  - Item
+  - MountPoint
+  - Undefined
   layers:
   - Default
   - TransparentFX
@@ -51,6 +52,12 @@ TagManager:
   - name: Platform
     uniqueID: 1341613817
     locked: 0
+  - name: Outline
+    uniqueID: 4044296837
+    locked: 0
+  - name: Interactable
+    uniqueID: 334209885
+    locked: 0
   - name: NPC
     uniqueID: 2962026303
     locked: 0
@@ -59,4 +66,7 @@ TagManager:
     locked: 0
   - name: Dialog
     uniqueID: 1341964637
+    locked: 0
+  - name: UI
+    uniqueID: 827937585
     locked: 0
