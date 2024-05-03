@@ -12,6 +12,7 @@ public class ConversationManger : MonoBehaviour
     public Image rightCharacterImage; // 显示右侧角色头像的图片框
     public Button nextButton; // 下一个按钮
     public Canvas dialogueCanvas; // 对话框的 Canvas
+    public Canvas bagCanvas;
 
     private Queue<string> sentences = new Queue<string>();// 对话内容队列
 
@@ -77,6 +78,7 @@ public class ConversationManger : MonoBehaviour
     void EndConversation()
     {
         dialogueCanvas.gameObject.SetActive(false);
+        bagCanvas.gameObject.SetActive(true);
     }
 }
 

@@ -7,12 +7,14 @@ public class ConversationTrigger : MonoBehaviour
     public ConversationManger dialogueManager;
     public Conversation conversation;
     public Canvas bagCanvas;
+    public Canvas dialogueCanvas; // ???? Canvas
 
     public AudioSource backgroundMusic;
 
     void Start()
     {
         bagCanvas.gameObject.SetActive(false);
+        dialogueCanvas.gameObject.SetActive(true);
         backgroundMusic.Play();
         if (dialogueManager != null && conversation != null)
         {
