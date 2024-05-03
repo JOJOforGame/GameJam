@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 953dc450ee10a1b43a94da638c6a1321
+guid: 5df762cfee951df47a362395c9378795
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1222337493438415029
-    second: Weixin Image_20240429132207_0
+      213: -6724901840263831054
+    second: outline_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 274, y: 282, z: 273, w: 276}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -139,22 +139,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weixin Image_20240429132207_0
+      name: outline_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 6000
-        height: 3100
+        width: 798
+        height: 634
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b0c90c597d96f010800000000000000
-      internalID: 1222337493438415029
+      spriteID: 2f124b508695ca2a0800000000000000
+      internalID: -6724901840263831054
       vertices: []
       indices: 
       edges: []
@@ -162,15 +162,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Weixin Image_20240429132207_0: 1222337493438415029
+      outline_0: -6724901840263831054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

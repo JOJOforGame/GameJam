@@ -20,9 +20,11 @@ public class CameraFollow : MonoBehaviour
         {
             Vector3 targetPosition = target.position + offset;
 
-            // 水平方向的跟随
+            // 计算相机到屏幕边缘的距离
             float horizontalScreenEdge = mainCamera.ScreenToWorldPoint(new Vector3(edgeBuffer, 0f, mainCamera.nearClipPlane)).x;
+            float verticalScreenEdge = mainCamera.ScreenToWorldPoint(new Vector3(0f, edgeBuffer, mainCamera.nearClipPlane)).y;
 
+            // 水平方向的跟随
             if (target.position.x < transform.position.x - horizontalScreenEdge || target.position.x > transform.position.x + horizontalScreenEdge)
             {
                 float horizontalMoveSpeed = Mathf.Abs(target.GetComponent<Rigidbody2D>().velocity.x);
@@ -32,8 +34,6 @@ public class CameraFollow : MonoBehaviour
             }
 
             // 垂直方向的跟随
-            float verticalScreenEdge = mainCamera.ScreenToWorldPoint(new Vector3(0f, edgeBuffer, mainCamera.nearClipPlane)).y;
-
             if (target.position.y < transform.position.y - verticalScreenEdge || target.position.y > transform.position.y + verticalScreenEdge)
             {
                 float verticalMoveSpeed = Mathf.Abs(target.GetComponent<Rigidbody2D>().velocity.y);

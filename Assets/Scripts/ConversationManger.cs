@@ -86,7 +86,7 @@ public class Conversation
     public string xieYanName = "谢言";
     public string[] xieYanSentences = {
         "纸鸢纸鸢，挂树上了！",
-        "纸鸢飞高高，阿言也要高高！"
+        "姐姐会飞檐走壁，一定可以帮我拿到纸鸢的~"
     };
 
     public string xieMingName = "谢明";
