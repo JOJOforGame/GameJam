@@ -13,7 +13,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void InitItem(Item newitem)
     {
         item = newitem;
-        img.sprite = newitem.sp;
+        img.sprite = newitem.icon;
     }
 
     public void OnBeginDrag(PointerEventData eventData)

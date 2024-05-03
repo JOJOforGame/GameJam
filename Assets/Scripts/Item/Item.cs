@@ -8,6 +8,7 @@ public class Item : ScriptableObject
     public string id;
     public string name;
     public Sprite sp;
+    public Sprite icon;
 }
 
 public enum ItemType
