@@ -61,12 +61,9 @@ public class InvManager : MonoBehaviour
 
     public Item GetSelectedItem()
     {
-        Debug.Log("1");
         if (selectedSlot != -1)
         {
-            Debug.Log("2");
             InventoryItem item = slots[selectedSlot].GetComponentInChildren<InventoryItem>();
-            Debug.Log("3");
             if (item != null)
             {
                 Debug.Log(item.item.name);
