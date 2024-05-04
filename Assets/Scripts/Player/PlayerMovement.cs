@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxis("Horizontal");
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (horizontalMove >= 0f)
+        if (horizontalMove > 0f)
         {
             sr.flipX = false;
         }

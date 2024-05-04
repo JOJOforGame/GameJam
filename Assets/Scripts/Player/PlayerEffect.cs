@@ -71,6 +71,22 @@ public class PlayerEffect : MonoBehaviour
                 } else {
                     mp.MountItem();
                 }
+            } else if (lastInteractiveObj.CompareTag("MountPointTypeA"))
+            {
+                MountPointTypeA mp = lastInteractiveObj.GetComponent<MountPointTypeA>();
+                if (mp.targetObj.activeSelf) {
+                    mp.UnMountItem();
+                } else {
+                    mp.MountItem();
+                }
+            } else if (lastInteractiveObj.CompareTag("MountPointTypeB"))
+            {
+                MountPointTypeB mp = lastInteractiveObj.GetComponent<MountPointTypeB>();
+                if (mp.targetObj.activeSelf) {
+                    mp.UnMountItem();
+                } else {
+                    mp.MountItem();
+                }
             }
         }
     }
