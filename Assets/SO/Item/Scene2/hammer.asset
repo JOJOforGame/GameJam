@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1e048c53107fa244a75de1fbce41bbf, type: 3}
-  m_Name: Bamboo Pole
+  m_Name: hammer
   m_EditorClassIdentifier: 
-  id: It01
-  name: Bamboo Pole
-  sp: {fileID: 3061095986383900361, guid: dc27945b79530894b8f18b5f8e249af3, type: 3}
-  icon: {fileID: 8158641404235830151, guid: 914886ea9bb4ab84eab70322696ee5f0, type: 3}
+  id: 0201
+  name: hammer
+  sp: {fileID: 7207448258468798209, guid: 573b6dbc9963c854dbfb1ebba70d8739, type: 3}
+  icon: {fileID: 7207448258468798209, guid: 573b6dbc9963c854dbfb1ebba70d8739, type: 3}

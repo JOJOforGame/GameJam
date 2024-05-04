@@ -15,3 +15,4 @@ MonoBehaviour:
   id: It02
   name: Kite
   sp: {fileID: 4999002713125057293, guid: 6d1ee9eb3120c194abb2fe1187582964, type: 3}
+  icon: {fileID: -1188310342564557810, guid: 5dcee9be7bbbc64408910aee46e70dd4, type: 3}
