@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0204
   name: key
-  sp: {fileID: 0}
-  icon: {fileID: 0}
+  sp: {fileID: -3357289602171556417, guid: faa00f0b17d2aef469ce5b39c2591d82, type: 3}
+  icon: {fileID: 8244373659881030960, guid: 26e9eff173bae8f48a8b4ddf5fd85222, type: 3}

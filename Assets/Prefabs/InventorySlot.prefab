@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 6258481573733550430}
-  selected: {r: 0.93333334, g: 0.9220793, b: 0.38431376, a: 0.5176471}
+  selected: {r: 1, g: 1, b: 1, a: 0.5176471}
   notSelected: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &7931314440776459006
 MonoBehaviour:
