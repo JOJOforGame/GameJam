@@ -6385,6 +6385,10 @@ PrefabInstance:
       propertyPath: InvManager
       value: 
       objectReference: {fileID: 1731396588}
+    - target: {fileID: 8902707204562782554, guid: 792ac86beb410364597b116e9482b290, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 827937585
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
