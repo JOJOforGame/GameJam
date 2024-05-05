@@ -22,16 +22,20 @@ public class InvManager : MonoBehaviour
             bool res = int.TryParse(Input.inputString, out int number);
             if (res && number > 0 && number < 10)
             {
-                selectSlot(number - 1);
+                trySelectSlot(number - 1);
             }
         }
     }
 
-    void selectSlot(int slot)
+    void trySelectSlot(int slot)
     {
         if (selectedSlot != -1)
         {
             slots[selectedSlot].Deselect();
+        }
+        if (selectedSlot == slot)
+        {
+            return;
         }
         selectedSlot = slot;
         slots[selectedSlot].Select();
@@ -104,5 +108,23 @@ public class InvManager : MonoBehaviour
         {
             Destroy(slots[index].GetComponentInChildren<InventoryItem>().gameObject);
         }
+    }
+
+    public bool TryRemoveItems(Item[] items)
+    {
+        int[] idxs = new int[items.Length];
+        for (int i = 0; i < items.Length; i++)
+        {
+            idxs[i] = GetItemIndex(items[i]);
+            if (idxs[i] == -1)
+            {
+                return false;
+            }
+        }
+        foreach (int idx in idxs)
+        {
+            Destroy(slots[idx].GetComponentInChildren<InventoryItem>().gameObject);
+        }
+        return true;
     }
 }
