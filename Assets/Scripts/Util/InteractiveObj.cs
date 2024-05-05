@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class InteractiveObj : MonoBehaviour
 {
-    public Item item;
-    public GameObject obj;
+    public ObjBase objBase;
     public GameObject outline;
 
     void Start()
     {
-        obj.GetComponent<SpriteRenderer>().sprite = item.sp;
+        if (objBase != null && objBase.sp != null)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = objBase.sp;
+        }
         if (outline != null)
         {
             outline.SetActive(false);

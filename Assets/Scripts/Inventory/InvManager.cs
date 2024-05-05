@@ -66,7 +66,6 @@ public class InvManager : MonoBehaviour
             InventoryItem item = slots[selectedSlot].GetComponentInChildren<InventoryItem>();
             if (item != null)
             {
-                Debug.Log(item.item.name);
                 return item.item;
             }
             return null;
@@ -83,6 +82,27 @@ public class InvManager : MonoBehaviour
             {
                 Destroy(item.gameObject);
             }
+        }
+    }
+
+    public int GetItemIndex(Item item)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            InventoryItem slotItem = slots[i].GetComponentInChildren<InventoryItem>();
+            if (slotItem != null && slotItem.item.Equals(item))
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void RemoveItemByIndex(int index)
+    {
+        if (index != -1)
+        {
+            Destroy(slots[index].GetComponentInChildren<InventoryItem>().gameObject);
         }
     }
 }

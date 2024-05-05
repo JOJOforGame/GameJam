@@ -10,11 +10,13 @@ public class PlayerEffect : MonoBehaviour
     public IndicatorManager IndicatorManager;
     public InvManager InvManager;
 
-    GameObject lastInteractiveObj;
+    GameObject lastInteractGO;
 
     // Update is called once per frame
     void Update()
     {
+        InteractiveObj iobj = lastInteractGO != null ? lastInteractGO.GetComponent<InteractiveObj>() : null;
+
         // Shadow effect.
         if (Player.isGrounded())
         {
@@ -44,9 +46,16 @@ public class PlayerEffect : MonoBehaviour
         }
 
         // Indicator effect.
-        if (lastInteractiveObj != null)
+        if (iobj != null)
         {
-            IndicatorManager.ShowIndicator(lastInteractiveObj.name);
+            if (!string.IsNullOrEmpty(iobj.objBase.description))
+            {
+                IndicatorManager.ShowIndicator(iobj.objBase.description);
+            }
+            else
+            {
+                IndicatorManager.ShowIndicator(lastInteractGO.name);
+            }
         }
         else
         {
@@ -54,40 +63,9 @@ public class PlayerEffect : MonoBehaviour
         }
 
         // Interact with object.
-        if (Input.GetKeyDown(KeyCode.E) && lastInteractiveObj != null)
+        if (Input.GetKeyDown(KeyCode.E) && iobj != null)
         {
-            if (lastInteractiveObj.CompareTag("Item"))
-            {
-                bool res = InvManager.AddItem(lastInteractiveObj.GetComponent<InteractiveObj>().item);
-                if (res)
-                {
-                    Destroy(lastInteractiveObj);
-                }
-            } else if (lastInteractiveObj.CompareTag("MountPoint"))
-            {
-                MountPoint mp = lastInteractiveObj.GetComponent<MountPoint>();
-                if (mp.targetObj.activeSelf) {
-                    mp.UnMountItem();
-                } else {
-                    mp.MountItem();
-                }
-            } else if (lastInteractiveObj.CompareTag("MountPointTypeA"))
-            {
-                MountPointTypeA mp = lastInteractiveObj.GetComponent<MountPointTypeA>();
-                if (mp.targetObj.activeSelf) {
-                    mp.UnMountItem();
-                } else {
-                    mp.MountItem();
-                }
-            } else if (lastInteractiveObj.CompareTag("MountPointTypeB"))
-            {
-                MountPointTypeB mp = lastInteractiveObj.GetComponent<MountPointTypeB>();
-                if (mp.targetObj.activeSelf) {
-                    mp.UnMountItem();
-                } else {
-                    mp.MountItem();
-                }
-            }
+            iobj.Interact();
         }
     }
 
@@ -96,7 +74,7 @@ public class PlayerEffect : MonoBehaviour
         InteractiveObj interactiveObj = collision.GetComponent<InteractiveObj>();
         if (interactiveObj != null)
         {
-            lastInteractiveObj = collision.gameObject;
+            lastInteractGO = collision.gameObject;
         }
     }
 
@@ -105,9 +83,9 @@ public class PlayerEffect : MonoBehaviour
         InteractiveObj interactiveObj = collision.GetComponent<InteractiveObj>();
         if (interactiveObj != null)
         {
-            if (collision.gameObject == lastInteractiveObj)
+            if (collision.gameObject == lastInteractGO)
             {
-                lastInteractiveObj = null;
+                lastInteractGO = null;
             }
         }
     }
