@@ -9,6 +9,9 @@ TagManager:
   - Item
   - MountPoint
   - Undefined
+  - MountPointTypeB
+  - MountPointTypeA
+  - MountPointTypeC
   layers:
   - Default
   - TransparentFX
