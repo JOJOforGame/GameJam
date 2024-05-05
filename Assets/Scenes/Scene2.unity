@@ -2998,7 +2998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &952528201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4836,7 +4836,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: cde99d14d9c78314dae95713f16cc066, type: 2}
     - target: {fileID: 223752126285305905, guid: 4ec72b837e2394f418ddb0fa4da1bd14, type: 3}
       propertyPath: m_Name
-      value: OpenDoor
+      value: Open Door
       objectReference: {fileID: 0}
     - target: {fileID: 4220312292607471539, guid: 4ec72b837e2394f418ddb0fa4da1bd14, type: 3}
       propertyPath: m_UsedByEffector
@@ -6024,11 +6024,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.83880115, y: 0}
+  m_Offset: {x: 0.84, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

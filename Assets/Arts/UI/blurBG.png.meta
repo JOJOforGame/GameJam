@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blurBG_0: -4029130199319792958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
