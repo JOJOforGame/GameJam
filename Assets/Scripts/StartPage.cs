@@ -6,8 +6,20 @@ using UnityEngine.TextCore.Text;
 
 public class StartPage : MonoBehaviour
 {
+    public GameObject textCanvas;
+
+    // ??????
+    public float displayDuration = 10f;
+
+    public AudioSource backgroundMusic;
+
     public LoadDataManager loadDataManager;
     // Function to handle Continue button click
+
+    private void Start()
+    {
+        backgroundMusic.Play();
+    }
     public void ContinueGame()
     {
         // Check if there is saved data
@@ -37,9 +49,15 @@ public class StartPage : MonoBehaviour
             return;
         }
         loadDataManager.Initialize();
-       
-        // Load the scene for starting a new game
-        SceneManager.LoadScene("Scene1");
+
+        // ??????? Canvas
+        if (textCanvas != null)
+        {
+            textCanvas.SetActive(true);
+        }
+
+        // ?????????
+        Invoke("LoadNextScene", displayDuration);
     }
 
     // Function to handle Settings button click
@@ -57,5 +75,10 @@ public class StartPage : MonoBehaviour
         LoadDataManager.Instance.SaveGameData();
         // Quit the application
         Application.Quit();
+    }
+
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene("Scene1");
     }
 }
