@@ -45,10 +45,18 @@ public class PlayerEffect : MonoBehaviour
             Dust.GetComponent<SpriteRenderer>().flipX = false;
         }
 
-        // Indicator effect.
-        if (iobj != null)
+        // Interact with object.
+        if (Input.GetKeyDown(KeyCode.E) && iobj != null)
         {
-            if (iobj.objBase != null && !string.IsNullOrEmpty(iobj.objBase.description))
+            iobj.Interact();
+        }
+
+        // Indicator effect.
+        if (iobj != null && ShouldShowIndicatorForNPC(iobj))
+        {
+            if (iobj.objBase != null &&
+                !string.IsNullOrEmpty(iobj.objBase.description)
+            )
             {
                 IndicatorManager.ShowIndicator(iobj.objBase.description);
             }
@@ -60,12 +68,6 @@ public class PlayerEffect : MonoBehaviour
         else
         {
             IndicatorManager.HideIndicator();
-        }
-
-        // Interact with object.
-        if (Input.GetKeyDown(KeyCode.E) && iobj != null)
-        {
-            iobj.Interact();
         }
     }
 
@@ -88,5 +90,11 @@ public class PlayerEffect : MonoBehaviour
                 lastInteractGO = null;
             }
         }
+    }
+
+    private bool ShouldShowIndicatorForNPC(InteractiveObj obj)
+    {
+        NPCScript npc = obj as NPCScript;
+        return npc != null && !npc.inDialog();
     }
 }

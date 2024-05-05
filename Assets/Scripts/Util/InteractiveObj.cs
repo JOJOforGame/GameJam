@@ -29,6 +29,11 @@ public class InteractiveObj : MonoBehaviour
         Debug.Log("Interacted with " + name);
     }
 
+    public virtual void OnPlayerExit()
+    {
+        Debug.Log("Player exit");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -48,6 +53,7 @@ public class InteractiveObj : MonoBehaviour
             {
                 outline.SetActive(false);
             }
+            OnPlayerExit();
         }
     }
 }

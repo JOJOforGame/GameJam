@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516450e03552a7648bf26282537b5771, type: 3}
+  m_Name: TestNPCS0
+  m_EditorClassIdentifier: 
+  requiredQuests:
+  - {fileID: 11400000, guid: 5dabb1468bc1929438fdb8c0e087cb3d, type: 2}
+  nextState: {fileID: 11400000, guid: 6c137f41caeadd94caa409ec787a3afc, type: 2}
+  sentences:
+  - Test NPC State 0 S0
+  - Test NPC State 0 S1
+  - Test NPC State 0 S2
+  - Test NPC State 0 S3
