@@ -100,3 +100,23 @@ public class Conversation
     public Sprite xieYanSprite;
     public Sprite xieMingSprite;
 }
+
+public class ConversationA
+{
+    public string xieYanName = "神树";
+    public string xieMingName = "谢明";
+    public string[] shenshuSentences = {
+    "遠方之客，來者何事？",
+    "吾何故以珍贵之叶与汝？且人生天地间，各有天命。宇宙循环，自然法则。若救尔妹，必有其相应之代价。人欲求幸福，往往视物表象，而忽视其中深意。尔是否愿为一时之喜而付不可逆之代价？",
+    "尔之决心可嘉，然天地秩序不可轻逆。取此神叶，亦当受其带来之一切。"
+};
+
+    public string[] xieMingSentences = {
+    "神明之树，闻尔叶可救我妹之危，敢求一片以救我妹矣。",
+    "然则，妹为我生之至爱，愿以一切代之！"
+};
+    
+
+    public Sprite shenshuSprite;
+    public Sprite xieMingSprite;
+}

@@ -48,7 +48,7 @@ public class PlayerEffect : MonoBehaviour
         // Indicator effect.
         if (iobj != null)
         {
-            if (!string.IsNullOrEmpty(iobj.objBase.description))
+            if (iobj.objBase != null && !string.IsNullOrEmpty(iobj.objBase.description))
             {
                 IndicatorManager.ShowIndicator(iobj.objBase.description);
             }
