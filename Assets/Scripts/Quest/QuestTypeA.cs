@@ -16,6 +16,7 @@ public class QuestTypeA : Quest
             int slotIdx = InvManager.instance.GetItemIndex(item);
             if (slotIdx == -1)
             {
+                Debug.Log("Can't complete quest");
                 return;
             }
             slotIdxs[i] = slotIdx;
@@ -24,6 +25,7 @@ public class QuestTypeA : Quest
         {
             InvManager.instance.RemoveItemByIndex(i);
         }
+        Debug.Log("Quest complete");
         completed = true;
     }
 }

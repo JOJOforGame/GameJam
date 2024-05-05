@@ -52,7 +52,7 @@ public class PlayerEffect : MonoBehaviour
         }
 
         // Indicator effect.
-        if (iobj != null && ShouldShowIndicatorForNPC(iobj))
+        if (lastInteractGO != null && tryNPCIndecatorCheck(iobj))
         {
             if (iobj.objBase != null &&
                 !string.IsNullOrEmpty(iobj.objBase.description)
@@ -92,9 +92,13 @@ public class PlayerEffect : MonoBehaviour
         }
     }
 
-    private bool ShouldShowIndicatorForNPC(InteractiveObj obj)
+    private bool tryNPCIndecatorCheck(InteractiveObj obj)
     {
         NPCScript npc = obj as NPCScript;
-        return npc != null && !npc.inDialog();
+        if (npc == null)
+        {
+            return true;
+        }
+        return !npc.inDialog();
     }
 }

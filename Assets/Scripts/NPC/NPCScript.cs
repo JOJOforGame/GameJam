@@ -22,7 +22,11 @@ public class NPCScript : InteractiveObj
 
     public override void Interact()
     {
-        Debug.Log("Interacting with NPC");
+        // Advance quest
+        foreach (Quest q in this.State.requiredQuests)
+        {
+            q.tryCompleteQuest();
+        }
         NPCState prevState = this.State;
         this.State = State.tryNextState();
         if (prevState != this.State)

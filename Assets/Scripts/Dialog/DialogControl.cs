@@ -48,6 +48,7 @@ public class DialogControl : MonoBehaviour
             typingRoutine = StartCoroutine(TypeSentence(sentences[s_index]));
         } else {
             resetDialog();
+            QuestManager.instance.TryGoToNextScene();
         }
 
         DialogIndicator.SetActive(!this.inDialog());
