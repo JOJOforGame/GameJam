@@ -91,11 +91,14 @@ public class InvManager : MonoBehaviour
 
     public int GetItemIndex(Item item)
     {
+        Debug.Log("Try getting item: " + item);
         for (int i = 0; i < slots.Length; i++)
         {
             InventoryItem slotItem = slots[i].GetComponentInChildren<InventoryItem>();
+            Debug.Log(item + " slot item " + slotItem.item);
             if (slotItem != null && slotItem.item.Equals(item))
             {
+                Debug.Log("Got item: " + item);
                 return i;
             }
         }
