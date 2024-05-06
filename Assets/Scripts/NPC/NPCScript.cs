@@ -9,6 +9,8 @@ public class NPCScript : InteractiveObj
 
     public DialogControl DC;
 
+    public GameObject optionalTarget;
+
     void Start()
     {
         Debug.Log(State.sentences);
@@ -33,6 +35,10 @@ public class NPCScript : InteractiveObj
         {
             DC.sentences = this.State.sentences;
             DC.resetDialog();
+            if (optionalTarget != null)
+            {
+                optionalTarget.SetActive(true);
+            }
         }
         DC.TryShowDialog();
     }

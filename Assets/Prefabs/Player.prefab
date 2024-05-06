@@ -286,8 +286,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 256
-  boxSize: {x: 0.55, y: 0.08}
-  castDistance: 0.82
+  boxSize: {x: 0.95, y: 0.24}
+  castDistance: 1.53
 --- !u!114 &7547661029608108693
 MonoBehaviour:
   m_ObjectHideFlags: 0
