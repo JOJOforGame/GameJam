@@ -3885,7 +3885,7 @@ MonoBehaviour:
   quests:
   - {fileID: 11400000, guid: 12179f96064f4ed4184a10a183a6f8eb, type: 2}
   transition: {fileID: 952528200}
-  transitionTime: 10
+  transitionTime: 25
 --- !u!1 &1151611069
 GameObject:
   m_ObjectHideFlags: 0
