@@ -27,6 +27,7 @@ public class NPCScript : InteractiveObj
         // Advance quest
         foreach (Quest q in this.State.requiredQuests)
         {
+            Debug.Log("Try quest complete");
             q.tryCompleteQuest();
         }
         NPCState prevState = this.State;

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: S3Q0
   m_EditorClassIdentifier: 
   questID: S3Q0
-  completed: 0
+  completed: 1
   requiredItems:
   - {fileID: 11400000, guid: e210b923450d1024eb82a0e1925c193e, type: 2}
   - {fileID: 11400000, guid: 0e53aa991d3ffa449854fba045d693bd, type: 2}
   - {fileID: 11400000, guid: 7d78f7b40c2054046b73be0be3669413, type: 2}
   slotItems:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e210b923450d1024eb82a0e1925c193e, type: 2}
+  - {fileID: 11400000, guid: 0e53aa991d3ffa449854fba045d693bd, type: 2}
+  - {fileID: 11400000, guid: 7d78f7b40c2054046b73be0be3669413, type: 2}

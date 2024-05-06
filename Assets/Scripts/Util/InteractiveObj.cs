@@ -5,14 +5,13 @@ using UnityEngine;
 public class InteractiveObj : MonoBehaviour
 {
     public ObjBase objBase;
-    public GameObject outline;
+    public GameObject outline = null;
 
     void Start()
     {
         Debug.Log("Start IO: " + objBase);
         if (objBase != null && objBase.sp != null)
         {
-            Debug.Log("Render sp: " + objBase.id);
             this.gameObject.GetComponent<SpriteRenderer>().sprite = objBase.sp;
         }
         if (outline != null)

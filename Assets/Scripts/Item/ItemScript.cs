@@ -7,6 +7,7 @@ public class ItemScript : InteractiveObj
 {
     public override void Interact()
     {
+        Debug.Log("Interacting with Item");
         bool res = InvManager.instance.AddItem(this.objBase as Item);
         if (res)
         {
