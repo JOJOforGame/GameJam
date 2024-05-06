@@ -3539,7 +3539,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3636,6 +3636,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a8f7b7cfcae724498daf02ce354e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1041682150}
+  dialogueManager: {fileID: 1041682147}
+  conversation:
+    xieYanName: "\u8C22\u8A00"
+    xieYanSentences:
+    - "\u7EB8\u9E22\u7EB8\u9E22\uFF0C\u6302\u6811\u4E0A\u4E86\uFF01"
+    - "\u59D0\u59D0\u4F1A\u98DE\u6A90\u8D70\u58C1\uFF0C\u4E00\u5B9A\u53EF\u4EE5\u5E2E\u6211\u62FF\u5230\u7EB8\u9E22\u7684~"
+    xieMingName: "\u8C22\u660E"
+    xieMingSentences:
+    - "\u8A00\u8A00\u522B\u62C5\u5FC3\uFF0C\u963F\u59CA\u6765\uFF01"
+    - "\u8A00\u8A00\u4EE5\u540E\u4E00\u5B9A\u4F1A\u548C\u5927\u6811\u4E00\u6837\u9AD8\u9AD8\u7684~"
+    xieYanSprite: {fileID: 0}
+    xieMingSprite: {fileID: 0}
 --- !u!1 &1927166225
 GameObject:
   m_ObjectHideFlags: 0

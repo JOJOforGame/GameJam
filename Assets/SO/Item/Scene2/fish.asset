@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: fish
   m_EditorClassIdentifier: 
   id: 0202
-  name: fish
   sp: {fileID: -2126085378978353956, guid: 47d5001b80eb8324bbc9dd30c1d368a9, type: 3}
+  description: "\u9C7C\u5E72"
   icon: {fileID: -3938207298906908334, guid: 5e740c869163ba043a5ecc98b1b2610e, type: 3}

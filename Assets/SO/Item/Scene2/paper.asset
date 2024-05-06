@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: paper
   m_EditorClassIdentifier: 
   id: 0205
-  name: paper
   sp: {fileID: 3822624171327346491, guid: d108f6b09bf1f9043a645fb6ad822049, type: 3}
+  description: "\u836F\u65B9"
   icon: {fileID: 3822624171327346491, guid: d108f6b09bf1f9043a645fb6ad822049, type: 3}

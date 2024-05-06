@@ -8,6 +8,8 @@ public class QuestManager : MonoBehaviour
     public GameObject textCanvas;
     public static QuestManager instance;
     public Quest[] quests;
+    public GameObject transition;
+    public int transitionTime = 10;
 
     void Awake()
     {
@@ -16,6 +18,7 @@ public class QuestManager : MonoBehaviour
         {
             quest.completed = false;
         }
+        transition.SetActive(false);
     }
 
     private bool checkQuestCompletion()
@@ -49,14 +52,6 @@ public class QuestManager : MonoBehaviour
             textCanvas.SetActive(true);
         }
 
-        StartCoroutine(JumpToNextScene(nextSceneIndex));
-    }
-
-    IEnumerator JumpToNextScene(int nextSceneIndex)
-    {
-        // set canvas to true
-
-        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(nextSceneIndex);
     }
 }
