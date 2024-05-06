@@ -15,12 +15,12 @@ public class QuestManager : MonoBehaviour
         instance = this;
         foreach (Quest quest in quests)
         {
-            quest.completed = false;
+            quest.resetQuest();
         }
         transition.SetActive(false);
     }
 
-    private bool checkQuestCompletion()
+    public bool checkQuestCompletion()
     {
         foreach (Quest q in quests)
         {
@@ -52,6 +52,7 @@ public class QuestManager : MonoBehaviour
 
     IEnumerator AdvanceToNextScene(int idx)
     {
+        yield return new WaitForSeconds(3);
         transition.SetActive(true);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(idx);
