@@ -16,12 +16,12 @@ public class QuestManager : MonoBehaviour
         instance = this;
         foreach (Quest quest in quests)
         {
-            quest.completed = false;
+            quest.resetQuest();
         }
         transition.SetActive(false);
     }
 
-    private bool checkQuestCompletion()
+    public bool checkQuestCompletion()
     {
         foreach (Quest q in quests)
         {
@@ -42,8 +42,8 @@ public class QuestManager : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
-        // If we're on the last scene, wrap around to the first scene
-        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+        // If we're on the last scene, wrap around to the first scene
+        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
         {
             nextSceneIndex = 0;
         }
@@ -52,6 +52,14 @@ public class QuestManager : MonoBehaviour
             textCanvas.SetActive(true);
         }
 
-        SceneManager.LoadScene(nextSceneIndex);
+        StartCoroutine(AdvanceToNextScene(nextSceneIndex));
+    }
+
+    IEnumerator AdvanceToNextScene(int idx)
+    {
+        yield return new WaitForSeconds(3);
+        transition.SetActive(true);
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(idx);
     }
 }

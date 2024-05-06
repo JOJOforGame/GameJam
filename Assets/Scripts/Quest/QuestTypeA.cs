@@ -7,6 +7,11 @@ public class QuestTypeA : Quest
 {
     public Item[] requiredItems;
 
+    public override void resetQuest()
+    {
+        completed = false;
+    }
+
     public override void tryCompleteQuest()
     {
         int[] slotIdxs = new int[requiredItems.Length];
