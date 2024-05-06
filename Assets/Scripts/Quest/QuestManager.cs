@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour
     public static QuestManager instance;
     public Quest[] quests;
     public GameObject transition;
+    public int preTransitionTime = 0;
     public int transitionTime = 10;
 
     void Awake()
@@ -52,7 +53,7 @@ public class QuestManager : MonoBehaviour
 
     IEnumerator AdvanceToNextScene(int idx)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(preTransitionTime);
         transition.SetActive(true);
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(idx);
