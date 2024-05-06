@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
+    public GameObject textCanvas;
     public static QuestManager instance;
     public Quest[] requiredQuests;
     public Quest[] additionalQuest;
@@ -51,6 +52,10 @@ public class QuestManager : MonoBehaviour
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
         {
             nextSceneIndex = 0;
+        }
+        if (textCanvas != null)
+        {
+            textCanvas.SetActive(true);
         }
 
         StartCoroutine(AdvanceToNextScene(nextSceneIndex));

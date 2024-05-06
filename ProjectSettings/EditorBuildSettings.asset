@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartPage.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/TransitionScene.unity
-    guid: 78a4c155960558644933c3748fd3e69d
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: c138cbe4a27a1a94796fae9eed495d05

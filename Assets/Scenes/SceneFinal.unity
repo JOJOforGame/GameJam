@@ -1515,8 +1515,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 888095440}
-  - component: {fileID: 888095439}
   - component: {fileID: 888095438}
+  - component: {fileID: 888095441}
   m_Layer: 0
   m_Name: ConversationGameObject
   m_TagString: Untagged
@@ -1621,33 +1621,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &888095439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888095437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f589dbd38b2c2640b744b5795f1c5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 1041682147}
-  conversation:
-    xieYanName: "\u8C22\u8A00"
-    xieYanSentences:
-    - "\u7EB8\u9E22\u7EB8\u9E22\uFF0C\u6302\u6811\u4E0A\u4E86\uFF01"
-    - "\u7EB8\u9E22\u98DE\u9AD8\u9AD8\uFF0C\u963F\u8A00\u4E5F\u8981\u9AD8\u9AD8\uFF01"
-    xieMingName: "\u8C22\u660E"
-    xieMingSentences:
-    - "\u8A00\u8A00\u522B\u62C5\u5FC3\uFF0C\u963F\u59CA\u6765\uFF01"
-    - "\u8A00\u8A00\u4EE5\u540E\u4E00\u5B9A\u4F1A\u548C\u5927\u6811\u4E00\u6837\u9AD8\u9AD8\u7684~"
-    xieYanSprite: {fileID: 3066749859503871992, guid: 3f28d00b31ac09e499afb34b7c152198, type: 3}
-    xieMingSprite: {fileID: 3066749859503871992, guid: 3f28d00b31ac09e499afb34b7c152198, type: 3}
-  bagCanvas: {fileID: 1673588755}
-  dialogueCanvas: {fileID: 1041682150}
-  backgroundMusic: {fileID: 888095438}
 --- !u!4 &888095440
 Transform:
   m_ObjectHideFlags: 0
@@ -1663,6 +1636,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888095441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888095437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d587f08d9b8e9f640a4f7f98dd109374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bagCanvas: {fileID: 1673588755}
+  backgroundMusic: {fileID: 888095438}
 --- !u!1 &920693615
 GameObject:
   m_ObjectHideFlags: 3
@@ -3499,12 +3486,12 @@ GameObject:
   - component: {fileID: 1673588754}
   - component: {fileID: 1673588753}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: BagCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1673588753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3655,6 +3642,165 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1855354996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855354999}
+  - component: {fileID: 1855354998}
+  - component: {fileID: 1855354997}
+  - component: {fileID: 1855355000}
+  m_Layer: 0
+  m_Name: Weixin Image_20240504214750_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1855354997
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855354996}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.81, y: 0.49}
+    newSize: {x: 1.81, y: 0.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.81, y: 0.49}
+  m_EdgeRadius: 0
+--- !u!212 &1855354998
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855354996}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1096212433
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2126085378978353956, guid: 47d5001b80eb8324bbc9dd30c1d368a9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.81, y: 0.49}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1855354999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855354996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.8073, y: -1.718, z: 0}
+  m_LocalScale: {x: 3.2891538, y: 3.242437, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855355000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855354996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a8f7b7cfcae724498daf02ce354e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 1041682150}
+  dialogueManager: {fileID: 1041682147}
+  conversation:
+    xieYanName: "\u8C22\u8A00"
+    xieYanSentences:
+    - "\u7EB8\u9E22\u7EB8\u9E22\uFF0C\u6302\u6811\u4E0A\u4E86\uFF01"
+    - "\u59D0\u59D0\u4F1A\u98DE\u6A90\u8D70\u58C1\uFF0C\u4E00\u5B9A\u53EF\u4EE5\u5E2E\u6211\u62FF\u5230\u7EB8\u9E22\u7684~"
+    xieMingName: "\u8C22\u660E"
+    xieMingSentences:
+    - "\u8A00\u8A00\u522B\u62C5\u5FC3\uFF0C\u963F\u59CA\u6765\uFF01"
+    - "\u8A00\u8A00\u4EE5\u540E\u4E00\u5B9A\u4F1A\u548C\u5927\u6811\u4E00\u6837\u9AD8\u9AD8\u7684~"
+    xieYanSprite: {fileID: 0}
+    xieMingSprite: {fileID: 0}
 --- !u!1 &1927166225
 GameObject:
   m_ObjectHideFlags: 0
