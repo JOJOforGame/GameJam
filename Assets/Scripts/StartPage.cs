@@ -60,6 +60,7 @@ public class StartPage : MonoBehaviour
         Invoke("LoadNextScene", displayDuration);
     }
 
+
     // Function to handle Settings button click
     public void OpenSettings()
     {
