@@ -106,6 +106,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   State: {fileID: 11400000, guid: 89c977de4822a0e48aaa842c007f3289, type: 2}
   DC: {fileID: 5798176099513058709}
+  optionalTarget: {fileID: 0}
 --- !u!61 &1468812833442345640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -233,6 +234,10 @@ PrefabInstance:
       propertyPath: Character
       value: 
       objectReference: {fileID: 3449300940317577627}
+    - target: {fileID: 7937132418491127202, guid: 555d0d916973edb4588d94483bf0c0dd, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
