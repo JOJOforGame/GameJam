@@ -7,6 +7,11 @@ public class UIControl : MonoBehaviour
     public GameObject InGameUI;
     public GameObject PauseMenu;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

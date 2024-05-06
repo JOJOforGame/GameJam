@@ -9,8 +9,10 @@ public class InteractiveObj : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Start IO: " + objBase);
         if (objBase != null && objBase.sp != null)
         {
+            Debug.Log("Render sp: " + objBase.id);
             this.gameObject.GetComponent<SpriteRenderer>().sprite = objBase.sp;
         }
         if (outline != null)

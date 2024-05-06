@@ -7,6 +7,8 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager instance;
     public Quest[] quests;
+    public GameObject transition;
+    public int transitionTime = 10;
 
     void Awake()
     {
@@ -15,6 +17,7 @@ public class QuestManager : MonoBehaviour
         {
             quest.completed = false;
         }
+        transition.SetActive(false);
     }
 
     private bool checkQuestCompletion()
@@ -44,6 +47,13 @@ public class QuestManager : MonoBehaviour
             nextSceneIndex = 0;
         }
 
-        SceneManager.LoadScene(nextSceneIndex);
+        StartCoroutine(AdvanceToNextScene(nextSceneIndex));
+    }
+
+    IEnumerator AdvanceToNextScene(int idx)
+    {
+        transition.SetActive(true);
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(idx);
     }
 }
