@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 516450e03552a7648bf26282537b5771, type: 3}
-  m_Name: TestNPCS0
+  m_Name: S1S1
   m_EditorClassIdentifier: 
-  requiredQuests:
-  - {fileID: 0}
-  nextState: {fileID: 11400000, guid: 6c137f41caeadd94caa409ec787a3afc, type: 2}
+  requiredQuests: []
+  nextState: {fileID: 0}
   sentences:
-  - "Test NPC State 0 S0 \u4E2D\u6587"
-  - Test NPC State 0 S1
-  - Test NPC State 0 S2
-  - Test NPC State 0 S3
+  - "\u8C22\u8C22"
