@@ -35,6 +35,7 @@ public class InvManager : MonoBehaviour
         }
         if (selectedSlot == slot)
         {
+            selectedSlot = -1;
             return;
         }
         selectedSlot = slot;
