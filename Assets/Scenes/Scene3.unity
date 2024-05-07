@@ -2216,10 +2216,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 822f1cf09bca592449555db9c07e9056, type: 3}
-  m_Resource: {fileID: 8300000, guid: 822f1cf09bca592449555db9c07e9056, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f640e448bff52244894f954725c35ea5, type: 3}
+  m_Resource: {fileID: 8300000, guid: f640e448bff52244894f954725c35ea5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.861
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2885,7 +2885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7B2C\u56DB\u7AE0\n\u51AC\u81F3\n\n\u59D0\u59D0\u8DCB\u5C71\u6D89\u6C34\uFF0C\u5343\u91CC\u8FE2\u8FE2\uFF0C\u7EC8\u4E8E\u89C5\u5F97\u80E1\u6768\u4E4B\u6797\u3002\u5176\u4E2D\u4E00\u68F5\u6811\uFF0C\u751F\u7740\u5343\u76EE\uFF0C\u4F3C\u6709\u8A00\u8BED\u6B32\u8FF0\u3002"
+  m_text: "\u7B2C\u56DB\u7AE0\n\u51AC\u81F3\n\n\u59D0\u59D0\u8DCB\u5C71\u6D89\u6C34\uFF0C\u5343\u91CC\u8FE2\u8FE2\uFF0C\u7EC8\u4E8E\u89C5\u5F97\u80E1\u6768\u4E4B\u6797\u3002\u5176\u4E2D\u4E00\u68F5\u795E\u6728\uFF0C\u751F\u7740\u5343\u76EE\uFF0C\u4F3C\u6709\u8A00\u8BED\u6B32\u8FF0\u3002"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8794862a520753947bb3c71c57e06043, type: 2}
   m_sharedMaterial: {fileID: -492328652480466222, guid: 8794862a520753947bb3c71c57e06043, type: 2}

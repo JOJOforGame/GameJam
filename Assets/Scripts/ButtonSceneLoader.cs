@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ButtonSceneLoader : MonoBehaviour
 {
     public Button button;
+    public string sceneName;
 
     private void Start()
     {    
@@ -17,6 +18,6 @@ public class ButtonSceneLoader : MonoBehaviour
     private void LoadScene()
     {
         // ????????????
-        SceneManager.LoadScene("LastScene");
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -8,6 +8,7 @@ public class TriggerFinalConversation : MonoBehaviour
     public ConversationManger dialogueManager; // 对话管理器
     public Conversation conversation; // 对话
     public Button button1; // 第一个按钮
+    public Button button2; // 第一个按钮
     public ParticleSystem particleEffect; // 粒子效果
     public GameObject player; // Player 对象
 
@@ -25,6 +26,7 @@ public class TriggerFinalConversation : MonoBehaviour
         dialogueManager.ConversationEnded += OnConversationEnded;
         button1.onClick.AddListener(OnButton1Click);
         button1.gameObject.SetActive(false);
+        button2.gameObject.SetActive(false);
     }
 
     private void OnConversationEnded()
@@ -72,7 +74,8 @@ public class TriggerFinalConversation : MonoBehaviour
             // 启动协程逐渐隐藏 player
             StartCoroutine(FadeOutPlayer());
             button1 .gameObject.SetActive(false);
-        
+            button2.gameObject.SetActive(true);
+
     }
 
     IEnumerator FadeOutPlayer()
