@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: wire
   m_EditorClassIdentifier: 
   id: 
-  name: wire
   sp: {fileID: 7559660176984697408, guid: 0202e8824b830fd4b9351179b4b0b812, type: 3}
+  description: "\u9C7C\u7EBF"
   icon: {fileID: 7559660176984697408, guid: 0202e8824b830fd4b9351179b4b0b812, type: 3}

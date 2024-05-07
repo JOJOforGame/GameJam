@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 12179f96064f4ed4184a10a183a6f8eb, type: 2}
   nextState: {fileID: 11400000, guid: d0c7eb37bceb5444e8167e8f0ebc1119, type: 2}
   sentences:
-  - "\u5E2E\u6211\u62FF\u4E0B\u836F\u65B9\uFF0C\u5728\u4E09\u697C"
+  - "\u4F60\u8981\u5E2E\u4F60\u59B9\u59B9\u770B\u75C5\u7684\u8BDD\uFF0C\u5148\u5E2E\u6211\u62FF\u4E0B\u836F\u65B9\uFF0C\u5728\u4E09\u697C"

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: "\u673A\u5173\u9053\u51771"
   m_EditorClassIdentifier: 
   id: S3I0
-  sp: {fileID: -6599255671808196907, guid: ad1cac4d841fa414882e27f7439d5cdf, type: 3}
-  description: 
-  icon: {fileID: -6599255671808196907, guid: ad1cac4d841fa414882e27f7439d5cdf, type: 3}
+  sp: {fileID: 5011807186507826969, guid: 2e251dbf929554f4c894e95fb58526ce, type: 3}
+  description: "\u9524\u5B50"
+  icon: {fileID: 5011807186507826969, guid: 2e251dbf929554f4c894e95fb58526ce, type: 3}

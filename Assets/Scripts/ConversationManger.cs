@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,10 +14,13 @@ public class ConversationManger : MonoBehaviour
     public Button nextButton; // 下一个按钮
     public Canvas dialogueCanvas; // 对话框的 Canvas
     public Canvas bagCanvas;
+    public bool isConversationActive = false; // 对话是否正在进行中的标志
 
     private Queue<string> sentences = new Queue<string>();// 对话内容队列
 
     private string currentCharacterName; // 当前对话角色名字
+
+    public event Action ConversationEnded;
 
     private void Awake()
     {
@@ -25,6 +29,11 @@ public class ConversationManger : MonoBehaviour
 
     public void StartConversation(Conversation conversation)
     {
+        if (isConversationActive)
+        {
+            return; // 如果对话已经在进行中，则不执行新的对话
+        }
+
         if (sentences == null)
         {
             sentences = new Queue<string>();
@@ -42,6 +51,7 @@ public class ConversationManger : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
+        isConversationActive = true;
 
 
         DisplayNextSentence();
@@ -77,9 +87,12 @@ public class ConversationManger : MonoBehaviour
 
     void EndConversation()
     {
+        isConversationActive = false; 
         dialogueCanvas.gameObject.SetActive(false);
         bagCanvas.gameObject.SetActive(true);
+        ConversationEnded?.Invoke();
     }
+
 }
 
 [System.Serializable]
